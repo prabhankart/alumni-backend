@@ -1,7 +1,8 @@
 import { Router } from "express";
-import { listAlumni, getAlumni, addAlumni } from "../controllers/alumniController.js";
-const router = Router();
-router.get("/", listAlumni);
-router.get("/:id", getAlumni);
-router.post("/", addAlumni);
-export default router;
+import { listAlumni, addAlumni } from "../controllers/alumniController.js";
+import { validateBody, AlumniCreate } from "../validate.js";
+
+const r = Router();
+r.get("/", listAlumni);
+r.post("/", validateBody(AlumniCreate), addAlumni);
+export default r;

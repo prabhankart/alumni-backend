@@ -1,7 +1,9 @@
 import { Router } from "express";
-import { listMentors, addMentor, stats } from "../controllers/mentorController.js";
-const router = Router();
-router.get("/", listMentors);
-router.post("/", addMentor);
-router.get("/stats", stats);
-export default router;
+import { listMentors, applyMentorship, mentorStats } from "../controllers/mentorController.js";
+import { validateBody, MentorshipApply } from "../validate.js";
+
+const r = Router();
+r.get("/", listMentors);
+r.get("/stats", mentorStats);
+r.post("/apply", validateBody(MentorshipApply), applyMentorship);
+export default r;
