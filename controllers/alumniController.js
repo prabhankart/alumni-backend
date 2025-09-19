@@ -12,7 +12,7 @@ export async function listAlumni(req, res) {
     if (profession) query.profession = new RegExp(profession, "i");
 
     const data = await Alumni.find(query).sort({ createdAt: -1 });
-    res.json({ total: data.length, data });
+    res.json(data);                     // ← return ARRAY only
   } catch (e) {
     res.status(500).json({ error: e.message });
   }

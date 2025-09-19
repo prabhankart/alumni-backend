@@ -4,7 +4,7 @@ import MentorshipApplication from "../models/MentorshipApplication.js";
 export async function listMentors(_req, res) {
   try {
     const data = await Mentor.find({}).sort({ name: 1 });
-    res.json({ total: data.length, data });
+    res.json(data);                     // ← return ARRAY only
   } catch (e) {
     res.status(500).json({ error: e.message });
   }
@@ -22,7 +22,7 @@ export async function applyMentorship(req, res) {
   }
 }
 
-// simple stats for Home page (demo)
+// Used by Home page (this one SHOULD return an object)
 export async function mentorStats(_req, res) {
   try {
     const totalMentors = await Mentor.countDocuments();
@@ -31,7 +31,7 @@ export async function mentorStats(_req, res) {
       { $group: { _id: "$expertise", c: { $sum: 1 } } },
       { $sort: { c: -1 } }, { $limit: 5 }
     ]);
-    res.json({ totalMentors, topAreas });
+    res.json({ totalMentors, topAreas });   // object is fine here
   } catch (e) {
     res.status(500).json({ error: e.message });
   }

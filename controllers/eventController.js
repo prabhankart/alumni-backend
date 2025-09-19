@@ -3,7 +3,7 @@ import Event from "../models/Event.js";
 export async function listEvents(_req, res) {
   try {
     const data = await Event.find({}).sort({ date: 1 });
-    res.json({ total: data.length, data });
+    res.json(data);                     // ← return ARRAY only
   } catch (e) {
     res.status(500).json({ error: e.message });
   }
