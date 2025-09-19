@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Aarav Mehta",
+    "batch": "2016",
+    "profession": "Software Engineer",
+    "location": "Bengaluru",
+    "skills": [
+      "React",
+      "Node.js"
+    ],
+    "linkedin": "https://linkedin.com/in/example1"
+  },
+  {
+    "id": 2,
+    "name": "Ishita Roy",
+    "batch": "2018",
+    "profession": "Data Scientist",
+    "location": "Hyderabad",
+    "skills": [
+      "Python",
+      "ML"
+    ],
+    "linkedin": "https://linkedin.com/in/example2"
+  },
+  {
+    "id": 3,
+    "name": "Rahul Sharma",
+    "batch": "2015",
+    "profession": "Product Manager",
+    "location": "Pune",
+    "skills": [
+      "Product",
+      "Analytics"
+    ],
+    "linkedin": ""
+  },
+  {
+    "id": 4,
+    "name": "Priya Nair",
+    "batch": "2019",
+    "profession": "UI/UX Designer",
+    "location": "Kochi",
+    "skills": [
+      "Figma",
+      "Design Systems"
+    ],
+    "linkedin": ""
+  },
+  {
+    "id": 5,
+    "name": "Vikram Singh",
+    "batch": "2014",
+    "profession": "DevOps Engineer",
+    "location": "Gurugram",
+    "skills": [
+      "AWS",
+      "Kubernetes"
+    ],
+    "linkedin": ""
+  }
+]

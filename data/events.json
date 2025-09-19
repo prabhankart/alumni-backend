@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "title": "Alumni Meet 2025",
+    "date": "2025-12-10",
+    "venue": "Auditorium",
+    "description": "Annual alumni gathering and networking."
+  },
+  {
+    "id": 2,
+    "title": "Mentorship Webinar",
+    "date": "2025-12-15",
+    "venue": "Online",
+    "description": "Mentors share career guidance."
+  }
+]

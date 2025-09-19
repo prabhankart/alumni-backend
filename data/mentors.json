@@ -1,0 +1,13 @@
+[
+  {
+    "id": 1,
+    "name": "Ishita Roy",
+    "skills": [
+      "Python",
+      "ML"
+    ],
+    "availability": "Weekends",
+    "contact": "ishita@example.com",
+    "sessions": 5
+  }
+]
