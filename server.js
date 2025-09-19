@@ -9,7 +9,7 @@ import alumniRoutes from "./routes/alumniRoutes.js";
 import eventRoutes from "./routes/eventRoutes.js";
 import mentorRoutes from "./routes/mentorRoutes.js";
 import Mentor from "./models/Mentor.js"; // for tiny seed (optional)
-
+import devRoutes from "./routes/devRoutes.js";
 dotenv.config();
 
 const app = express();
@@ -37,7 +37,10 @@ app.use(cors({
 app.use(helmet());
 app.use(express.json());
 app.use(morgan("dev"));
-
+if (process.env.ALLOW_DEV === "true") {
+  app.use("/api/dev", devRoutes);
+  console.log("✅ Dev routes enabled at /api/dev (seed/reset)");
+}
 app.get("/api/health", (_req, res) => res.json({ ok: true, service: "alumni-platform-backend" }));
 
 app.use("/api/alumni", alumniRoutes);
